@@ -1,6 +1,7 @@
 "use strict";
 
 const knex = require("knex");
+const logger = require("logtown").getLogger("aul-knex");
 
 class KnexAdapter {
 
@@ -13,6 +14,7 @@ class KnexAdapter {
   }
 
   execute(builder) {
+    logger.debug(`Executing query: ${builder.toString()}`);
     return Promise.resolve(builder);
   }
 

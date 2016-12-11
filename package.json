@@ -1,6 +1,6 @@
 {
   "name": "aul-knex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adapter to be used with aul executor",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/zemd/aul-knex",
   "dependencies": {
-    "knex": "0.12.6"
+    "knex": "0.12.6",
+    "logtown": "1.0.5"
   }
 }
