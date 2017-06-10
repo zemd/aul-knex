@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/zemd/aul-knex",
   "dependencies": {
-    "knex": "0.12.6",
-    "logtown": "1.0.5"
+    "knex": "0.13.0",
+    "logtown": "2.1.1"
   }
 }
