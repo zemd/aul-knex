@@ -1,5 +1,7 @@
 # aul-knex adapter to leverage knex query builder with aul
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zemd/aul-knex.svg)](https://greenkeeper.io/)
+
 > Adapter to be used with aul executor
 
 [![npm version](https://badge.fury.io/js/aul-knex.svg)](https://www.npmjs.com/package/aul-knex)
