@@ -10,7 +10,10 @@ class KnexAdapter {
   }
 
   getProvider(source) {
-    return knex(this.opts).from(source);
+    const knexjs = knex(this.opts);
+    const provider = knexjs.from(source);
+    provider.raw = knexjs.raw.bind(knexjs);
+    return provider;
   }
 
   execute(builder) {
