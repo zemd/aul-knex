@@ -7,12 +7,12 @@ class KnexAdapter {
 
   constructor(opts = {}) {
     this.opts = opts;
+    this.knexjs = knex(this.opts);
   }
 
   getProvider(source) {
-    const knexjs = knex(this.opts);
-    const provider = knexjs.from(source);
-    provider.raw = knexjs.raw.bind(knexjs);
+    const provider = this.knexjs.from(source);
+    provider.raw = this.knexjs.raw.bind(this.knexjs);
     return provider;
   }
 
@@ -22,7 +22,7 @@ class KnexAdapter {
   }
 
   dispose(builder) {
-    builder.destroy();
+    return builder.destroy();
   }
 }
 
